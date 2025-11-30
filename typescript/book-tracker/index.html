@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="p-6 bg-gray-100">
+
+  <h1 class="text-3xl font-bold mb-4">Book Reading Tracker</h1>
+
+  <a href="tracker.html" class="bg-green-500 text-white p-2 rounded mb-4 inline-block">
+  Go to Reading Tracker
+  </a>
+
+
+  <form id="bookForm" class="p-4 bg-white rounded shadow space-y-3 mb-6">
+    <input id="title" class="border p-2 w-full" placeholder="Title" required>
+    <input id="author" class="border p-2 w-full" placeholder="Author" required>
+    <input id="pages" type="number" class="border p-2 w-full" placeholder="Pages" required>
+    <input id="pagesRead" type="number" class="border p-2 w-full" placeholder="Pages Read" required>
+    <select id="status" name="status" class="border p-2 w-full">
+      <option>Read</option><option>Re-read</option><option>DNF</option>
+      <option>Currently reading</option><option>Returned Unread</option><option>Want to read</option>
+    </select>
+    <select id="format" class="border p-2 w-full">
+      <option>Print</option><option>PDF</option><option>Ebook</option><option>AudioBook</option>
+    </select>
+    <input id="price" type="number" class="border p-2 w-full" placeholder="Price" required>
+    <input id="suggestedBy" class="border p-2 w-full" placeholder="Suggested by">
+    <button class="bg-blue-500 text-white p-2 rounded">Add Book</button>
+  </form>
+
+  <div id="books" class="space-y-4"></div>
+
+</body>
+</html>
